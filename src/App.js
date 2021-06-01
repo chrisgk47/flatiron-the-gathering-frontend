@@ -6,8 +6,19 @@ import './App.css';
 
 
 class App extends Component {
+
+  state = {
+    users: []
+  }
   
-  
+  componentDidMount() {
+    fetch('http://127.0.0.1:3000/users')
+      .then(res => res.json())
+      .then((users) => {
+        this.setState({ users })
+      })
+  }
+
   render(){
     return (
       <div className="App">
@@ -18,7 +29,7 @@ class App extends Component {
           <Sidebar />
         </div>
         <div className="Mainbody-Container">
-          <MainContainer />
+          <MainContainer users={this.state.users} />
         </div>
       </div>
     );

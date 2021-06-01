@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import User from '../components/User'
 
 class MainContainer extends Component {
 
@@ -6,7 +7,9 @@ class MainContainer extends Component {
     render() {
         return (
             <div className="main-body">
-                <h1>Hello2</h1>
+                {this.props.users.map((user) => {
+                    <User key={user.id} user={user} />
+                })}
             </div>
         )
     }

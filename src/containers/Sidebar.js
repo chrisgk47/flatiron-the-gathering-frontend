@@ -9,6 +9,7 @@ class Sidebar extends Component {
         return (
             <div className="sidebar">
                 <h1>Hello3</h1>
+                <div></div>
             </div>
         )
     }
