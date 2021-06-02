@@ -3,8 +3,11 @@ import Home from './components/Home'
 import About from './components/About'
 import Cards from './components/Cards'
 import Header from './containers/Header'
+import SignupForm from './components/SignupForm'
+import axios from 'axios'
 
 
+import logo from './media/logo.png'
 import './App.css';
 
 import {
@@ -14,7 +17,46 @@ import {
     Link
 } from "react-router-dom";
 
-export default class App extends Component{
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isLoggedIn: false,
+            user: {}
+        }
+    }
+
+    handleLogin = (data) => {
+        this.setState({
+          isLoggedIn: true,
+          user: data.user
+        })
+    }
+    handleLogout = () => {
+        this.setState({
+        isLoggedIn: false,
+        user: {}
+        })
+    }
+
+    componentDidMount() {
+        this.loginStatus()
+    }
+
+    loginStatus = () => {
+        axios.get('http://localhost:3001/logged_in', 
+       {withCredentials: true})
+        .then(response => {
+          if (response.data.logged_in) {
+            this.handleLogin(response)
+          } else {
+            this.handleLogout()
+          }
+        })
+        .catch(error => console.log('api errors:', error))
+    }
+
+
     render(){
         return (
             <div className="App">
@@ -22,12 +64,13 @@ export default class App extends Component{
                     <div className="App-Container">
                             <div className='header-cont'>
                                 <header className="header">
+                                    <img src={logo} alt='Flatiron The Gathering'/>
                                     <Header />
                                 </header>
                             </div>
-                            <div className="Sidebar">
+                            <div className="Sidebar-cont">
                                 <nav>
-                                    <div className="list">
+                                    <div className="Sidebar">
                                         <br></br>
                                         <h3>
                                             <Link to="/">Home</Link>
@@ -43,6 +86,10 @@ export default class App extends Component{
                                         <br></br>
                                         <h3>
                                             <Link to="/packs">Packs</Link>
+                                        </h3>
+                                        <br></br>
+                                        <h3>
+                                            <Link to="/signup">Signup</Link>
                                         </h3>
                                     </div>
                                 </nav>
@@ -62,6 +109,9 @@ export default class App extends Component{
                                 {/* <Route path="/packs">
                                     <Packs />
                                 </Route> */}
+                                <Route path="/signup" >
+                                    <SignupForm />
+                                </Route>
                             </Switch>
                     </div>
                 </Router>
@@ -69,6 +119,7 @@ export default class App extends Component{
         )   
     }
 }
+export default App
 
 // function goHome() {
 //     return (<Home />)

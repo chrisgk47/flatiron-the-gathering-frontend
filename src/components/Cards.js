@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Card from './Card'
 
-import '../Cards.css';
+import './Cards.css';
 
 class Cards extends Component {
     state = {
@@ -25,7 +25,7 @@ class Cards extends Component {
     render(){
         return (
             <div className="CardList">
-                <h1>Here are the cards</h1>
+                <h1>Card List</h1>
                 {this.state.cards.map((card) => (
                     <Card
                         key={card.id}

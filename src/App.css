@@ -1,7 +1,10 @@
-.App {
-  background-image: url('https://wallpaperaccess.com/full/2288809.jpg');
-  background-size: auto;
-  position: flex;
+body {
+  background: url('https://wallpaperaccess.com/full/2288809.jpg')no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
 }
 .App-Container {
   display: grid;
@@ -13,35 +16,43 @@
                        "sidebar main main main main";
   grid-auto-flow: dense;
   grid-gap: 40px;
-  /* background-size: contain; */
-  /* background-image: url('https://wallpaperaccess.com/full/2288809.jpg'); */
   height: 1500px;
   width: 100%;
 }
 
-/* .App {
-  grid-template-columns: 3fr auto; */
-  /* grid-template-columns: repeat(auto-fit, minmax(250px, 3fr)); */
-  /* grid-template-rows: 1000 auto; */
-  /* grid-template-rows: repeat(auto-fit, minmax(250px, 1000px));
-  text-align: center;
-} */
 .header-cont {
   grid-area: header;
   /* background-image: url('https://static8.depositphotos.com/1177973/814/i/600/depositphotos_8144806-stock-photo-spotlight-studio-interior-black-background.jpg'); */
   /* background-color: black; */
-  min-height: 15vh;
-  width: 100%;
+  min-height: 10vh;
+  width: 2000px;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   align-items: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(15px + 1vmin);
   background-color: #1b1d20;
+  left: 0px;
   color: rgb(158, 193, 212);
   text-shadow: rgb(71, 142, 155) 1px 0 10px;
-  opacity: 0.7px;
-  position: fixed;
+  opacity: 0.9px;
+}
+
+/* .title {
+
+} */
+
+.header {
+  left: 0px;
+  width: auto;
+}
+
+.header img {
+  height: 100px;
+  width: 100px;
+  top: 10px;
+  left: 10px;
+  position: absolute;
 }
 
 /* .nav {
@@ -63,27 +74,28 @@
   width: 200px;
 } */
 
-.list {
+.Sidebar {
   list-style: none;
   text-align: center;
   font-size: 30px;
   padding: 20px;
+  top: 160px;
   margin: 0px;
   grid-area: sidebar;
   background-color: #1b1d20;
   color: rgb(228, 178, 178);
   text-shadow: rgb(71, 142, 155) 1px 0 10px;
   text-align: center;
-  height: 1000px;
+  height: 1200px;
   width: 200px;
   list-style-type: none;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
 }
 
 .About-Cont {
   grid-area: main;
-  height: 1000px;
+  height: 1200px;
   width: 90%;
   padding: 20px;
   margin: 0px;
@@ -94,6 +106,15 @@
   /* background-image: url('https://cdn.wallpapersafari.com/33/15/JNXEm4.jpg'); */
   color: rgb(158, 193, 212);
   text-shadow: rgb(71, 142, 155) 1px 0 10px;
+}
+
+.about {
+  grid-area: main;
+  width: 60%;
+  margin: 10px;
+  left: 300px;
+  text-align: center;
+  position: relative;
 }
 
 .MainContainer {

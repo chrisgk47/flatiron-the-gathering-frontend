@@ -11,18 +11,9 @@ class About extends Component {
                 <div className="about">
                 <br></br>
                 <br></br>
-                    <p>This app is a <b>Magic The Gathering</b> and <b>GTA V</b> themed card collection app<br></br>
-                    that allows you to open 'packs' of cards that are randomly generated. 
-                    <br></br>
-                    A User, once signed in, can save the cards they want in 'My Collection',
-                    <br></br>
-                    or click on the 'Cards' section to view all the possible cards in the realm.
-                    <br></br>
-                    The characters of the cards are generated from the students of Flatiron School's cohorts.<br></br>
-                    The students are transformed as characters of the <b>FTG</b> realm, and will be given 
-                    <br></br>
-                    abilities and elements to name a few.  So get online and start collecting!</p>
-                    <br></br>
+                    <p>This app is a <b>Magic The Gathering</b> and <b>GTA V</b> themed card collection app that allows you to open 'packs' of cards that are randomly generated. A User, once signed in, can save the cards they want in 'My Collection', or click on the 'Cards' section to view all the possible cards in the realm. The characters of the cards are generated from the students of Flatiron School's cohort, who are then transformed into characters of the <b>FTG</b> realm; given abilities and elements to name a few. 
+                    <br></br> 
+                    So get online and start collecting!</p>
                 </div>
                 <div className="contacts">
                     <h4><u>Contacts</u></h4>
