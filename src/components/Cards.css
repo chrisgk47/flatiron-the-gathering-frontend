@@ -10,41 +10,97 @@
     font-family:monospace;
     font-size: calc(6px + 1vmin);
     background-color: #1b1d20;
-    color: rgb(158, 193, 212);
-    text-shadow: rgb(71, 142, 155) 1px 0 10px;
+    /* color: rgb(158, 193, 212);
+    text-shadow: rgb(71, 142, 155) 1px 0 10px; */
 
     /* background-image: url('https://i0.wp.com/images.ctfassets.net/ryplwhabvmmk/4KBUfhwrTGsF2AzVz4TjM4/9060545e850b512c668d7f093dbb0167/worlds_showcase_event_battlefield.png?ssl=1'); */
 }
 
 .card{
-    /* outline-style: groove; */
-    border-radius: 30px;
-    border-color: rgb(71, 142, 155);
-    text-align: left;
-    border: rgb(66, 65, 78) solid 1px;
-    padding: 1rem;
-    width: 15rem;
-    height: 25rem;
     display: inline-grid;
-    margin: 1rem 2rem;
-    box-shadow: 3px 4px #8da4e6;
+    margin: 1% auto;
+    padding: 3px 0;
+    border-radius: 7px;
+    background: black;
+    width: 350px;
+    height: 490px;
 }
 
-.card img {
-    display: block;
-    flex: 0 1 auto;
-    height: 150px;
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    cursor: pointer;
-    position: center;
-    padding: auto;
-    align-items: center;
-    border-radius: 50px;
-    border: 5px solid rgba(151, 165, 224, 0.86);
+.card-inner {
+    width: 96%;
+    height: 93.5%;
+    background: #00b3e6;
+    padding: .5rem 0;
+    position: relative;
+    margin: .3rem auto;
 }
+
+.card-title {
+    border-radius: .4rem;
+    margin: 0 auto;
+    padding: 0 0 0 3%;
+    width: 97%;
+    background: #fff;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.card-hp-top {
+    float: right;
+    margin: .1rem .3rem 0 0;
+    background: #ccc;
+    border-radius: 50%;
+    width: 1.3rem;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    text-align: center;    
+  }
+
+.card-avatar {
+    background: #333;
+    width: 95%;
+    height: 14rem;
+    margin: 0 auto;
+}
+
+.card-ability {
+    border-radius: .4rem;
+    margin: 0 auto;
+    padding: 0 .5rem;
+    width: 98%;
+    background: #fff;
+    font-size: .9rem;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.card-description {
+    background: #ccc;
+    width: 94%;
+    height: 150px;
+    margin: 0 auto;
+    font-size: .9rem;
+    padding: .7rem .5rem;
+    text-align: left;
+}
+
+.card-ability-strength {
+    background: #fff;
+    border-radius: .4rem;
+    float: right;
+    margin: -.8rem 1rem 0 0;
+    padding: .15rem .4rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+.card-footer {
+    padding: .5rem .7rem 0 .7rem;
+  }
 
 ul {
     list-style: none;
