@@ -1,0 +1,52 @@
+.CardList {
+    flex: 0 1 auto;
+    text-align: center;
+    grid-area: main;
+    height: 1000px;
+    background-color: #1b1d20;
+    width: 90%;
+    padding: 20px;
+    margin: 0px;
+    font-family:monospace;
+    font-size: calc(6px + 1vmin);
+    background-color: #1b1d20;
+    color: rgb(158, 193, 212);
+    text-shadow: rgb(71, 142, 155) 1px 0 10px;
+
+    /* background-image: url('https://i0.wp.com/images.ctfassets.net/ryplwhabvmmk/4KBUfhwrTGsF2AzVz4TjM4/9060545e850b512c668d7f093dbb0167/worlds_showcase_event_battlefield.png?ssl=1'); */
+}
+
+.card{
+    /* outline-style: groove; */
+    border-radius: 30px;
+    border-color: rgb(71, 142, 155);
+    text-align: left;
+    border: rgb(66, 65, 78) solid 1px;
+    padding: 1rem;
+    width: 18rem;
+    height: 30rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #8da4e6;
+}
+
+.card img {
+    display: block;
+    flex: 0 1 auto;
+    height: 225px;
+    width: 225px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    cursor: pointer;
+    position: center;
+    padding: auto;
+    align-items: center;
+    border-radius: 50px;
+    border: 5px solid rgba(151, 165, 224, 0.86);
+}
+
+ul {
+    list-style: none;
+    justify-content: left;
+}
