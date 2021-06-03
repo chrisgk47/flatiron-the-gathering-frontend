@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
-import Home from './components/Home'
 import About from './components/About'
-import Cards from './components/Cards'
-import Header from './containers/Header'
-import SignupForm from './components/SignupForm'
-import axios from 'axios'
+import Home from './Home'
+import Header from './Header'
+import CardList from './components/CardList'
+import Collection from './Collection'
+import CollectionForm from './components/CollectionForm'
 
 
 import logo from './media/logo.png'
 import './App.css';
+import './components/Cards.css';
 
 import {
     BrowserRouter as Router,
@@ -17,45 +18,67 @@ import {
     Link
 } from "react-router-dom";
 
+const cardUrl = 'http://localhost:3000/cards'
+const collectionsUrl = 'http://localhost:3000/collections'
+const headers = {
+    Accepts: 'application/json',
+    'Content-type': 'application/json'
+}
+
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isLoggedIn: false,
-            user: {}
-        }
+    state = {
+        cards: [],
+        collections: [],
     }
+  
+    componentDidMount(){
+      fetch(cardUrl)
+        .then(res => res.json())
+        .then((cards) => this.setState({cards}))
+    }
+    // addToCollection = (card) => {
+    //     if(!this.state.collection.includes(card)){
+    //         this.setState({
+    //             collection: [...this.state.collection, card]
+    //         })
+    //     }
+    // }
 
-    handleLogin = (data) => {
+    handleClick = () => {
+        let newBoolean = !this.state.display
         this.setState({
-          isLoggedIn: true,
-          user: data.user
+          display: newBoolean
         })
+      }
+
+    addToCollection = (card) => {
+        card.card_id = card.id
+
+        fetch('http://localhost:3000/cards', {
+            method: 'POST',
+            headers,
+            body: JSON.stringify(card),
+        })
+        .then(res => res.json())
+        .then((newCard) => this.setState({cards: [...this.state.cards, newCard]}))
+        .catch((err) => console.log(err))
+        this.handleClick()
     }
-    handleLogout = () => {
-        this.setState({
-        isLoggedIn: false,
-        user: {}
-        })
+    releaseFromCollection = (card) => {
+        this.setState({ collection: this.state.collection.filter((c) => c !== card)})
     }
 
-    componentDidMount() {
-        this.loginStatus()
-    }
-
-    loginStatus = () => {
-        axios.get('http://localhost:3001/logged_in', 
-       {withCredentials: true})
-        .then(response => {
-          if (response.data.logged_in) {
-            this.handleLogin(response)
-          } else {
-            this.handleLogout()
-          }
+    deleteCard= (card) => {
+        // this.releaseFromCollection(card)
+        fetch(`${cardUrl}/${card.id}`, {
+            method: 'DELETE',
+            headers,
         })
-        .catch(error => console.log('api errors:', error))
+            .then(() => {
+                this.setState({cards: this.state.cards.filter((c) => c.id !== card.id)})
+            })
+            .catch((err) => console.log(err))
     }
-
 
     render(){
         return (
@@ -66,51 +89,57 @@ class App extends Component {
                                 <header className="header">
                                     <img src={logo} alt='Flatiron The Gathering'/>
                                     <Header />
+                                    
                                 </header>
                             </div>
                             <div className="Sidebar-cont">
                                 <nav>
                                     <div className="Sidebar">
                                         <br></br>
-                                        <h3>
-                                            <Link to="/">Home</Link>
-                                        </h3>
-                                        <br></br>
+                                        {this.state.display ? <CollectionForm addToCollection={this.addToCollection}/> : null}
+                                    <button onClick={this.handleClick}>Show Form</button>
                                         <h3>
                                             <Link to="/about">About</Link>
                                         </h3>
                                         <br></br>
                                         <h3>
-                                            <Link to="/cards">Cards</Link>
+                                            <Link to="/">Home</Link>
                                         </h3>
                                         <br></br>
                                         <h3>
-                                            <Link to="/packs">Packs</Link>
+                                            <Link to="/collections">Collections</Link>
                                         </h3>
                                         <br></br>
-                                        <h3>
-                                            <Link to="/signup">Signup</Link>
-                                        </h3>
                                     </div>
                                 </nav>
                             </div>
-                            <div className="MainContainer">
+                            {/* <div className="MainContainer">
                                 <Home />
-                            </div> 
+                            </div>  */}
                             <Switch>
-                                <Route path="/about">
+                                <Route exact path="/"
+                                        render={() => (
+                                            <CardList 
+                                                cards={this.state.cards}
+                                                handleClick={this.addToCollection}
+                                                handleDelete={this.deleteCard}
+                                            />
+                                        )}>
+                                </Route>
+                                <Route exact path="/about">
                                     <About />
                                 </Route>
-                                <Route path="/cards">
-                                    <Cards />
-                                </Route>
-                                <Route path="http://localhost:3001/">
-                                </Route>
-                                {/* <Route path="/packs">
-                                    <Packs />
-                                </Route> */}
-                                <Route path="/signup" >
-                                    <SignupForm />
+                                <Route
+                                    exact path='/collections'
+                                    render={() => (
+                                        <Collection
+                                            cards={this.state.collections}
+                                            handleClick={this.addToCollection}
+                                            handleDelete={this.deleteFromCollection}
+                                        />
+                                    )}
+                                >
+
                                 </Route>
                             </Switch>
                     </div>
@@ -121,12 +150,3 @@ class App extends Component {
 }
 export default App
 
-// function goHome() {
-//     return (<Home />)
-       
-// }
-
-
-// function Cards() {
-//     return <h2>Cards</h2>
-// }

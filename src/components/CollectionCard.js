@@ -1,12 +1,12 @@
 import React from 'react'
-import './Cards.css';
+import './CollectionCard.css';
 
-const Card = ({card, handleClick, handleDelete}) => {
+const CollectionCard = ({card, handleClick, handleDelete}) => {
     return (
         <div className="card">
             <div className="card-inner">
                 
-                <div className="card-title" key={card.id}>
+                <div className="card-title" key={card.card_id}>
                     {card.name}
                     <div className="card-hp-top">HP: {card.hp}</div>
                     <button className='delete-bttn' onClick={() => handleDelete(card)}>
@@ -36,4 +36,4 @@ const Card = ({card, handleClick, handleDelete}) => {
     )
 }
 
-export default Card
+export default CollectionCard

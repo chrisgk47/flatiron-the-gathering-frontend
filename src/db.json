@@ -1,0 +1,242 @@
+{
+   "cards": [
+
+        {
+        "id": 1,
+        "name": "Aiden ",
+        "ability": "Death Touch",
+        "ability_strength": 50,
+        "hp": 50,
+        "rarity": "common",
+        "holographic": "plain",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U01J27DEBJR-c025e912671d-512",
+        "description": "My dear Piter, your pleasures are what tie you to me. How could I object to that?",
+        "created_at": "2021-06-03T06:51:51.063Z",
+        "updated_at": "2021-06-03T06:51:51.063Z"
+        },
+
+        {
+        "id": 2,
+        "name": "Alexandra",
+        "ability": "Defender",
+        "ability_strength": 21,
+        "hp": 50,
+        "rarity": "rare",
+        "holographic": "epic",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U01P3M7H6TZ-3f0e30a00702-512",
+        "description": "Remedy this situation, restore spice production, or you will live out your life in a pain amplifier!",
+        "created_at": "2021-06-03T06:51:51.113Z",
+        "updated_at": "2021-06-03T06:51:51.113Z"
+        },
+
+        {
+        "id": 3,
+        "name": "Carlos",
+        "ability": "Double Strike",
+        "ability_strength": 37,
+        "hp": 50,
+        "rarity": "uncommon",
+        "holographic": "plain",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U01HZS9Q336-1f74273d7034-512",
+        "description": "One must always keep the tools of statecraft sharp and ready. Power and fear - sharp and ready.",
+        "created_at": "2021-06-03T06:51:51.116Z",
+        "updated_at": "2021-06-03T06:51:51.116Z"
+        },
+
+        {
+        "id": 4,
+        "name": "Chris",
+        "ability": "Enchant",
+        "ability_strength": 48,
+        "hp": 50,
+        "rarity": "uncommon",
+        "holographic": "plain",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U01LYNW3TMM-de7dfc536650-512",
+        "description": "The young reed dies so easily. Beginnings are times of such peril.",
+        "created_at": "2021-06-03T06:51:51.119Z",
+        "updated_at": "2021-06-03T06:51:51.119Z"
+        },
+
+        {
+        "id": 5,
+        "name": "Guilherme",
+        "ability": "Equip",
+        "ability_strength": 14,
+        "hp": 50,
+        "rarity": "rare",
+        "holographic": "plain",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U01KD20QCKH-90da256b2115-512",
+        "description": "I must have him dead and his line ended.",
+        "created_at": "2021-06-03T06:51:51.122Z",
+        "updated_at": "2021-06-03T06:51:51.122Z"
+        },
+
+        {
+        "id": 6,
+        "name": "James",
+        "ability": "First Strike",
+        "ability_strength": 30,
+        "hp": 50,
+        "rarity": "common",
+        "holographic": "plain",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U01KH0VVA0K-1c04c4d54d7b-512",
+        "description": "Usul has called a big one. Again, it is the legend.",
+        "created_at": "2021-06-03T06:51:51.126Z",
+        "updated_at": "2021-06-03T06:51:51.126Z"
+        },
+
+        {
+        "id": 7,
+        "name": "Johnny",
+        "ability": "Flash",
+        "ability_strength": 33,
+        "hp": 50,
+        "rarity": "common",
+        "holographic": "epic",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U01JNCZGE7J-fba06ed039d0-512",
+        "description": "I never could bring myself to trust a traitor. Not even a traitor I created.",
+        "created_at": "2021-06-03T06:51:51.152Z",
+        "updated_at": "2021-06-03T06:51:51.152Z"
+        },
+
+        {
+        "id": 8,
+        "name": "Liz",
+        "ability": "Flying",
+        "ability_strength": 32,
+        "hp": 50,
+        "rarity": "common",
+        "holographic": "epic",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U01JG2AS4VC-6e5b0b535adf-512",
+        "description": "And you, my son, are you one who gives or one who takes?",
+        "created_at": "2021-06-03T06:51:51.156Z",
+        "updated_at": "2021-06-03T06:51:51.156Z"
+        },
+
+        {
+        "id": 9,
+        "name": "Marc",
+        "ability": "Haste",
+        "ability_strength": 44,
+        "hp": 50,
+        "rarity": "rare",
+        "holographic": "legendary",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-URT3NHU79-e0d07ff54ba2-512",
+        "description": "Listen carefully, Feyd. Observe the plans within plans within plans.",
+        "created_at": "2021-06-03T06:51:51.160Z",
+        "updated_at": "2021-06-03T06:51:51.160Z"
+        },
+
+        {
+        "id": 10,
+        "name": "Marty",
+        "ability": "Hexproof",
+        "ability_strength": 34,
+        "hp": 50,
+        "rarity": "common",
+        "holographic": "plain",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U01FG7S7D50-be53f22d53e9-512",
+        "description": "Before I do your bidding, manling, I must cleanse the way between us. You've put a water burden on me that I'm not sure I care to support. But we Fremen pay our debts",
+        "created_at": "2021-06-03T06:51:51.163Z",
+        "updated_at": "2021-06-03T06:51:51.163Z"
+        },
+
+        {
+        "id": 11,
+        "name": "Megan",
+        "ability": "Indestructible",
+        "ability_strength": 42,
+        "hp": 50,
+        "rarity": "rare",
+        "holographic": "epic",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U01F0K10ARX-8f50f6450586-512",
+        "description": "I will have Arrakis back for myself! He who controls the Spice controls the universe and what Piter did not tell you is we have control of someone who is very close, very close, to Duke Leto! This person, this traitor, will be worth more to us than ten legions of Sardaukar!",
+        "created_at": "2021-06-03T06:51:51.166Z",
+        "updated_at": "2021-06-03T06:51:51.166Z"
+        },
+
+        {
+        "id": 12,
+        "name": "Zech",
+        "ability": "Lifelink",
+        "ability_strength": 12,
+        "hp": 50,
+        "rarity": "common",
+        "holographic": "epic",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U01NZ12H1RD-g4743f0d7d2a-512",
+        "description": "Deep in the human unconscious is a pervasive need for a logical universe that makes sense. But the real universe is always one step beyond logic.",
+        "created_at": "2021-06-03T06:51:51.169Z",
+        "updated_at": "2021-06-03T06:51:51.169Z"
+        },
+
+        {
+        "id": 13,
+        "name": "Justin Muzzi",
+        "ability": "Menace",
+        "ability_strength": 24,
+        "hp": 50,
+        "rarity": "common",
+        "holographic": "epic",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-ULEG985FD-3cc96efe001d-512",
+        "description": "The mystery of life isn't a problem to solve, but a reality to experience.",
+        "created_at": "2021-06-03T06:51:51.172Z",
+        "updated_at": "2021-06-03T06:51:51.172Z"
+        },
+
+        {
+        "id": 14,
+        "name": "Greg",
+        "ability": "Reach",
+        "ability_strength": 11,
+        "hp": 50,
+        "rarity": "uncommon",
+        "holographic": "legendary",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U8H2RA3C1-643c8ce562ef-512",
+        "description": "My dear Piter, your pleasures are what tie you to me. How could I object to that?",
+        "created_at": "2021-06-03T06:51:51.175Z",
+        "updated_at": "2021-06-03T06:51:51.175Z"
+        },
+
+        {
+        "id": 15,
+        "name": "Michelle",
+        "ability": "Trample",
+        "ability_strength": 44,
+        "hp": 50,
+        "rarity": "uncommon",
+        "holographic": "legendary",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U9C1QTFPC-e5129d5d4af5-512",
+        "description": "The day hums sweetly when you have enough bees working for you.",
+        "created_at": "2021-06-03T06:51:51.178Z",
+        "updated_at": "2021-06-03T06:51:51.178Z"
+        },
+
+        {
+        "id": 16,
+        "name": "Toni",
+        "ability": "Vigilance",
+        "ability_strength": 14,
+        "hp": 50,
+        "rarity": "uncommon",
+        "holographic": "epic",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U01JWUFBCQ0-4baa729d7cc6-512",
+        "description": "What do you despise? By this are you truly known.",
+        "created_at": "2021-06-03T06:51:51.181Z",
+        "updated_at": "2021-06-03T06:51:51.181Z"
+        },
+
+        {
+        "id": 17,
+        "name": "Flatiron Bot",
+        "ability": "Method DELETE",
+        "ability_strength": 35,
+        "hp": 50,
+        "rarity": "common",
+        "holographic": "epic",
+        "image": "https://ca.slack-edge.com/T02MD9XTF-U018FLQULG5-12970b5dba93-512",
+        "description": "I must have him dead and his line ended.",
+        "created_at": "2021-06-03T06:51:51.184Z",
+        "updated_at": "2021-06-03T06:51:51.184Z"
+        }
+    ]
+}
