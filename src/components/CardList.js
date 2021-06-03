@@ -11,8 +11,9 @@ class CardList extends Component {
                         <Card
                             key={card.id}
                             card={card}
-                            handleClick={this.props.handleClick}
-                            handleDelete={this.props.handleDelete}
+                            addLikes={this.props.addLikes}
+                            // handleClick={this.props.handleClick}
+                            deleteCard={this.props.deleteCard}
                         />
                     ))}
                 </div>

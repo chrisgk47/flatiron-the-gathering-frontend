@@ -1,7 +1,7 @@
 import React from 'react'
 import './Cards.css';
 
-const Card = ({card, handleDelete}) => {
+const Card = ({card, addLikes, deleteCard}) => {
     return (
         <div className="card">
             <div className="card-inner">
@@ -9,7 +9,7 @@ const Card = ({card, handleDelete}) => {
                 <div className="card-title" key={card.id}>
                     {card.name}
                     <div className="card-hp-top">HP: {card.hp}</div>
-                    <button className='delete-bttn' onClick={() => handleDelete(card)}>
+                    <button className='delete-bttn' onClick={() => deleteCard(card)}>
                         X
                     </button>
                 </div>
@@ -21,7 +21,10 @@ const Card = ({card, handleDelete}) => {
                     />
                 </div>
                 <div className="card-ability">
-                    Ability: {card.ability} 
+                    Ability: {card.ability} <br></br>
+                    Likes: {card.likes}
+                    <button onClick={() => addLikes(card)} className='like-btn'>{'<3'}</button>
+                    {/* <button className='likes'>♥️</button> */}
                 </div>
                 <div className="card-description">
                     {card.description}

@@ -5,6 +5,7 @@ class CollectionForm extends Component {
   state = {
     name: '',
     ability: '',
+    likes: 0,
     ability_strength: '',
     hp: 50,
     rarity: '',
@@ -20,6 +21,7 @@ class CollectionForm extends Component {
     this.setState({ 
         name: '',
         ability: '',
+        likes: 0,
         ability_strength: '',
         hp: 50,
         rarity: '',

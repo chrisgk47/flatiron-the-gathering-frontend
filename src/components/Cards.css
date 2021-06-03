@@ -190,3 +190,9 @@ ul {
 .CollectionForm {
     text-align: center;
 }
+
+button {
+    height: 2px;
+    left: 20px;
+    position: absolute;
+}

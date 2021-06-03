@@ -21,7 +21,8 @@ const CollectionCard = ({card, handleClick, handleDelete}) => {
                     />
                 </div>
                 <div className="card-ability">
-                    Ability: {card.ability} 
+                    Ability: {card.ability} <br></br>
+                    Likes: {card.likes}
                 </div>
                 <div className="card-description">
                     {card.description}

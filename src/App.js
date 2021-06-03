@@ -5,6 +5,7 @@ import Header from './Header'
 import CardList from './components/CardList'
 import Collection from './Collection'
 import CollectionForm from './components/CollectionForm'
+import EditForm from './components/EditForm'
 
 
 import logo from './media/logo.png'
@@ -27,6 +28,7 @@ const headers = {
 
 class App extends Component {
     state = {
+        display: false,
         cards: [],
         collections: [],
     }
@@ -52,8 +54,6 @@ class App extends Component {
       }
 
     addToCollection = (card) => {
-        console.log(JSON.stringify(card))
-        console.log(headers)
         // card.card_id = card.id
 
         fetch('http://localhost:3000/cards', {
@@ -75,7 +75,7 @@ class App extends Component {
 
     deleteCard= (card) => {
         // this.releaseFromCollection(card)
-        fetch(`http://localhost:3000/cards/${card.id}`, {
+        fetch(`${cardUrl}/${card.id}`, {
             method: 'DELETE',
             headers: {
                 'Accepts': 'application/json',
@@ -84,6 +84,21 @@ class App extends Component {
         })
             .then(() => {
                 this.setState({cards: this.state.cards.filter((c) => c.id !== card.id)})
+            })
+            .catch((err) => console.log(err))
+    }
+
+    addLikes = (card) => {
+        fetch(`${cardUrl}/${card.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Accepts': 'application/json',
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({likes: card.likes + 1 })
+        })
+            .then((json) => {
+                cards: this.state.cards.map((c) => (c.id === card.id ? json : c))
             })
             .catch((err) => console.log(err))
     }
@@ -129,7 +144,8 @@ class App extends Component {
                                         render={() => (
                                             <CardList 
                                                 cards={this.state.cards}
-                                                handleDelete={this.deleteCard}
+                                                addLikes={this.addLikes}
+                                                deleteCard={this.deleteCard}
                                             />
                                         )}>
                                 </Route>
@@ -141,7 +157,6 @@ class App extends Component {
                                     render={() => (
                                         <Collection
                                             cards={this.state.collections}
-                                            handleClick={this.addToCollection}
                                             handleDelete={this.deleteFromCollection}
                                         />
                                     )}
