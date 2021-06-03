@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import About from './components/About'
-import Home from './Home'
 import Header from './Header'
 import CardList from './components/CardList'
 import Collection from './Collection'
 import CollectionForm from './components/CollectionForm'
-import EditForm from './components/EditForm'
+
 
 
 import logo from './media/logo.png'
@@ -20,16 +19,17 @@ import {
 } from "react-router-dom";
 
 const cardUrl = 'http://localhost:3000/cards'
-const collectionsUrl = 'http://localhost:3000/collections'
-const headers = {
-    Accepts: 'application/json',
-    'Content-type': 'application/json'
-}
+// const collectionsUrl = 'http://localhost:3000/collections'
+// const headers = {
+//     Accepts: 'application/json',
+//     'Content-type': 'application/json'
+// }
 
 class App extends Component {
     state = {
         display: false,
         cards: [],
+        likes: 0,
         collections: [],
     }
   
@@ -103,6 +103,10 @@ class App extends Component {
             .catch((err) => console.log(err))
     }
 
+    // incLikes = (card) => {
+    //     this.setState({likes: + 1})
+    // }
+
     render(){
         return (
             <div className="App">
@@ -130,7 +134,7 @@ class App extends Component {
                                         </h3>
                                         <br></br>
                                         <h3>
-                                            <Link to="/collections">Collections</Link>
+                                            <Link to="/collections">Contributors</Link>
                                         </h3>
                                         <br></br>
                                     </div>
@@ -144,6 +148,7 @@ class App extends Component {
                                         render={() => (
                                             <CardList 
                                                 cards={this.state.cards}
+                                                // incLikes={this.incLikes}
                                                 addLikes={this.addLikes}
                                                 deleteCard={this.deleteCard}
                                             />
