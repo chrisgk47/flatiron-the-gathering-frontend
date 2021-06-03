@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import CollectionCard from './CollectionCard'
 
+import './CollectionCard.css'
 class CollectionList extends Component {
     
     render() {

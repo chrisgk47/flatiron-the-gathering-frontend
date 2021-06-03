@@ -52,11 +52,16 @@ class App extends Component {
       }
 
     addToCollection = (card) => {
-        card.card_id = card.id
+        console.log(JSON.stringify(card))
+        console.log(headers)
+        // card.card_id = card.id
 
         fetch('http://localhost:3000/cards', {
             method: 'POST',
-            headers,
+            headers: {
+                'Accepts': 'application/json',
+                'Content-type': 'application/json'
+            },
             body: JSON.stringify(card),
         })
         .then(res => res.json())
@@ -70,9 +75,12 @@ class App extends Component {
 
     deleteCard= (card) => {
         // this.releaseFromCollection(card)
-        fetch(`${cardUrl}/${card.id}`, {
+        fetch(`http://localhost:3000/cards/${card.id}`, {
             method: 'DELETE',
-            headers,
+            headers: {
+                'Accepts': 'application/json',
+                'Content-type': 'application/json'
+            },
         })
             .then(() => {
                 this.setState({cards: this.state.cards.filter((c) => c.id !== card.id)})
@@ -97,7 +105,7 @@ class App extends Component {
                                     <div className="Sidebar">
                                         <br></br>
                                         {this.state.display ? <CollectionForm addToCollection={this.addToCollection}/> : null}
-                                    <button onClick={this.handleClick}>Show Form</button>
+                                    <button className="FormBtn" onClick={this.handleClick}>Show Form</button>
                                         <h3>
                                             <Link to="/about">About</Link>
                                         </h3>
@@ -121,7 +129,6 @@ class App extends Component {
                                         render={() => (
                                             <CardList 
                                                 cards={this.state.cards}
-                                                handleClick={this.addToCollection}
                                                 handleDelete={this.deleteCard}
                                             />
                                         )}>
@@ -139,7 +146,6 @@ class App extends Component {
                                         />
                                     )}
                                 >
-
                                 </Route>
                             </Switch>
                     </div>

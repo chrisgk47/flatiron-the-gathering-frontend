@@ -24,7 +24,7 @@
     text-align: center;
     grid-area: main;
     height: 1200px;
-    left: 250px;
+    left: 100px;
     background-color: transparent;
     width: 1000px;
     padding: 20px;
@@ -34,15 +34,15 @@
     background-color: #1b1d20;
     box-shadow: 10px 10px rgb(71, 142, 155);
     box-sizing: border-box;
-    position: relative;
+    position: fixed;
 }
 .collection {
     
-    flex: 0 1 auto;
+    /* flex: 0 1 auto; */
     text-align: center;
     grid-area: main;
     height: 1200px;
-    left: 250px;
+    left: 150px;
     background-color: transparent;
     width: 1500px;
     padding: 20px;
@@ -56,22 +56,23 @@
 }
 
 .collection-cont {
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     flex: 0 1 auto;
     text-align: center;
     grid-area: main;
     height: 1000px;
-    left: 90px;
+    left: 180px;
     background-color: transparent;
-    width: 1400px;
+    width: 1200px;
     padding: 10px;
+    top : 160px;
     margin: 0px;
     font-family:monospace;
     font-size: calc(6px + 1vmin);
     background-color: #1b1d20;
     box-shadow: 10px 10px rgb(71, 142, 155);
     box-sizing: border-box;
-    position: relative;
+    position: fixed;
     outline-style: groove;
 }
 

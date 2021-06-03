@@ -28,7 +28,7 @@ body {
   width: 2000px;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   align-items: center;
   font-size: calc(18px + 1vmin);
   background-color: #1b1d20;
@@ -37,6 +37,7 @@ body {
   text-shadow: rgb(71, 142, 155) 1px 0 10px;
   opacity: 0.9px;
   box-shadow: 10px 10px rgb(71, 142, 155);
+  position: fixed;
 }
 
 /* .title {
@@ -53,11 +54,13 @@ body {
   height: 100px;
   width: 100px;
   top: 10px;
-  left: 10px;
+  left: 100px;
   position: fixed;
   
 }
 a {
+  text-align: center;
+  left: 100px;
   color: rgb(219, 233, 241); 
     text-shadow: rgb(212, 234, 238) 1px 0 10px;
 }
@@ -65,7 +68,7 @@ a {
 .Sidebar {
   list-style: none;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   padding: 20px;
   top: 160px;
   margin: 0px;
@@ -75,7 +78,7 @@ a {
   text-shadow: rgb(71, 142, 155) 1px 0 10px;
   text-align: center;
   height: 1200px;
-  width: 200px;
+  width: 150px;
   list-style-type: none;
   cursor: pointer;
   position: fixed;

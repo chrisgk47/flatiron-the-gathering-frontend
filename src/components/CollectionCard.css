@@ -128,3 +128,9 @@ ul {
     list-style: none;
     justify-content: left;
 }
+
+.collection-container {
+    top: 160px;
+    left: 90px;
+    position: fixed;
+}

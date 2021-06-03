@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Cards.css'
+import './CollectionForm.css'
 class CollectionForm extends Component {
   state = {
     name: '',
@@ -12,6 +12,7 @@ class CollectionForm extends Component {
     image: '',
     description: ''
   }
+
 
   handleSubmit = (e) => {
     e.preventDefault()

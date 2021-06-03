@@ -19,20 +19,20 @@ class Home extends Component {
         collection: [],
     }
   
-    // componentDidMount(){
-    //   fetch(cardUrl)
-    //     .then(res => res.json())
-    //     .then((cards) => this.setState({cards}))
-    // }
+    componentDidMount(){
+      fetch(cardUrl)
+        .then(res => res.json())
+        .then((cards) => this.setState({cards}))
+    }
 
 
-    // addToCollection = (card) => {
-    //     if(!this.state.collection.includes(card)){
-    //         this.setState({
-    //             collection: [...this.state.collection, card]
-    //         })
-    //     }
-    // }
+    addToCollection = (card) => {
+        if(!this.state.collection.includes(card)){
+            this.setState({
+                collection: [...this.state.collection, card]
+            })
+        }
+    }
 
 
     releaseFromCollection = (card) => {
@@ -54,7 +54,7 @@ class Home extends Component {
     render(){
         return (
             <div className="HomeCont">
-                {/* <div className="CardList">
+                <div className="CardList">
                     <h1><u>Card List</u></h1>
                 <CardList
                     cards={this.state.cards}
@@ -69,7 +69,7 @@ class Home extends Component {
                         handleClick={this.addToCollection}
                         handleDelete={this.deleteFromCollection}
                     />
-                </div> */}
+                </div>
             </div>
             
         )
