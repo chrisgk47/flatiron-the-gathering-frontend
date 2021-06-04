@@ -17,9 +17,9 @@
     position: absolute;
     /* background-image: url('https://i0.wp.com/images.ctfassets.net/ryplwhabvmmk/4KBUfhwrTGsF2AzVz4TjM4/9060545e850b512c668d7f093dbb0167/worlds_showcase_event_battlefield.png?ssl=1'); */
 }
-.Cardlist-cont {
+/* .Cardlist-cont {
     grid-area: main;
-    position: fixed;
+    position: absolute;
     height: 1200px;
     left: 270px;
     top: 100px;
@@ -29,7 +29,7 @@
     margin: 0px;
     margin-top: 10px;
     margin-left: auto;
-}
+} */
 .collection {
     overflow: scroll;
     text-align: center;

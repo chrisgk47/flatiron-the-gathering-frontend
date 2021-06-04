@@ -103,9 +103,7 @@ class App extends Component {
                     <div className="App-Container">
                             <div className='header-cont'>
                                 <header className="header">
-                                    {/* <img src={logo} alt='Flatiron The Gathering'/> */}
                                     <Header />
-                                    
                                 </header>
                             </div>
                             <div className="Sidebar-cont">

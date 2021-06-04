@@ -29,6 +29,7 @@ class CollectionForm extends Component {
         image: '',
         description: ''
     })
+    e.target.reset()
   }
 
   handleChange = (e) => {
