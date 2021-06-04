@@ -46,7 +46,7 @@ class App extends Component {
     //     }
     // }
 
-    handleClick = () => {
+    handleClick = (e) => {
         let newBoolean = !this.state.display
         this.setState({
           display: newBoolean
@@ -54,8 +54,9 @@ class App extends Component {
       }
 
     addToCollection = (card) => {
+        console.log(JSON.stringify(card))
         // card.card_id = card.id
-
+       card.likes = 0
         fetch('http://localhost:3000/cards', {
             method: 'POST',
             headers: {
@@ -97,15 +98,11 @@ class App extends Component {
             },
             body: JSON.stringify({likes: card.likes + 1 })
         })
-            .then((json) => {
+            .then(res => res.json())
+            .then((json) => this.setState({
                 cards: this.state.cards.map((c) => (c.id === card.id ? json : c))
-            })
-            .catch((err) => console.log(err))
+            }))
     }
-
-    // incLikes = (card) => {
-    //     this.setState({likes: + 1})
-    // }
 
     render(){
         return (
@@ -123,8 +120,6 @@ class App extends Component {
                                 <nav>
                                     <div className="Sidebar">
                                         <br></br>
-                                        {this.state.display ? <CollectionForm addToCollection={this.addToCollection}/> : null}
-                                    <button className="FormBtn" onClick={this.handleClick}>Show Form</button>
                                         <h3>
                                             <Link to="/about">About</Link>
                                         </h3>
@@ -134,9 +129,11 @@ class App extends Component {
                                         </h3>
                                         <br></br>
                                         <h3>
-                                            <Link to="/collections">Contributors</Link>
+                                            <Link to="/contributors">Contributors</Link>
                                         </h3>
                                         <br></br>
+                                        {this.state.display ? <CollectionForm addToCollection={this.addToCollection}/> : null}
+                                    <button className="FormBtn" onClick={() => this.handleClick}>Show Form</button>
                                     </div>
                                 </nav>
                             </div>
@@ -158,7 +155,7 @@ class App extends Component {
                                     <About />
                                 </Route>
                                 <Route
-                                    exact path='/collections'
+                                    exact path='/contributors'
                                     render={() => (
                                         <Collection
                                             cards={this.state.collections}

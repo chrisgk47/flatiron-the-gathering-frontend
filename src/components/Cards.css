@@ -192,7 +192,8 @@ ul {
 }
 
 button {
-    height: 2px;
-    left: 20px;
+    height: 0.8px;
+    bottom: 10px;
+    left: 180px;
     position: absolute;
 }

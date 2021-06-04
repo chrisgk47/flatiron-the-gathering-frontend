@@ -91,7 +91,8 @@ h1 {
     padding: 0 .5rem;
     width: 98%;
     background: #fff;
-    font-size: .9rem;
+    font-size: .8rem;
+    height: 50px;
     line-height: 1.6rem;
     box-sizing: border-box;
     text-align: left;
