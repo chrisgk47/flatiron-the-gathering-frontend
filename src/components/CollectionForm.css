@@ -16,3 +16,34 @@ button {
     border: #52cdec solid 1px;
     color: #465358;
   }
+
+  /* form {
+      position: relative;
+      color: #52cdec;
+      top: 400px;
+      width: 500px;
+      left: 200px;
+      height: 500px;
+  } */
+
+  /* input { 
+      width: 400px; 
+      height: 50px; 
+      border: 1px solid #999999; 
+      padding: 5px; 
+      text-align: left;
+}
+input.submit {
+    position: relative;
+    background-color: #50555a;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 400px;
+    color: rgb(204, 242, 243);
+    font-size: 18px;
+    justify-self: center;
+    cursor: pointer;
+    text-align: center;
+    left: 5px;
+} */

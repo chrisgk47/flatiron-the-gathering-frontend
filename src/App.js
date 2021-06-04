@@ -5,11 +5,8 @@ import CardList from './components/CardList'
 import Collection from './Collection'
 import CollectionForm from './components/CollectionForm'
 
-
-
-import logo from './media/logo.png'
 import './App.css';
-import './components/Cards.css';
+
 
 import {
     BrowserRouter as Router,
@@ -29,7 +26,6 @@ class App extends Component {
     state = {
         display: false,
         cards: [],
-        likes: 0,
         collections: [],
     }
   
@@ -38,20 +34,17 @@ class App extends Component {
         .then(res => res.json())
         .then((cards) => this.setState({cards}))
     }
-    // addToCollection = (card) => {
-    //     if(!this.state.collection.includes(card)){
-    //         this.setState({
-    //             collection: [...this.state.collection, card]
-    //         })
-    //     }
-    // }
 
-    handleClick = (e) => {
-        let newBoolean = !this.state.display
-        this.setState({
-          display: newBoolean
-        })
-      }
+    // handleClick = (e) => {
+    //     let newBoolean = !this.state.display
+    //     console.log(e)
+    //     this.setState({
+    //       display: newBoolean
+    //     })
+    // }
+    releaseCard = (card) => {
+        this.setState({cards: this.state.cards.filter((c) => c !== card)})
+    }
 
     addToCollection = (card) => {
         console.log(JSON.stringify(card))
@@ -68,14 +61,13 @@ class App extends Component {
         .then(res => res.json())
         .then((newCard) => this.setState({cards: [...this.state.cards, newCard]}))
         .catch((err) => console.log(err))
-        this.handleClick()
     }
     releaseFromCollection = (card) => {
         this.setState({ collection: this.state.collection.filter((c) => c !== card)})
     }
 
     deleteCard= (card) => {
-        // this.releaseFromCollection(card)
+        this.releaseCard(card)
         fetch(`${cardUrl}/${card.id}`, {
             method: 'DELETE',
             headers: {
@@ -111,7 +103,7 @@ class App extends Component {
                     <div className="App-Container">
                             <div className='header-cont'>
                                 <header className="header">
-                                    <img src={logo} alt='Flatiron The Gathering'/>
+                                    {/* <img src={logo} alt='Flatiron The Gathering'/> */}
                                     <Header />
                                     
                                 </header>
@@ -132,8 +124,8 @@ class App extends Component {
                                             <Link to="/contributors">Contributors</Link>
                                         </h3>
                                         <br></br>
-                                        {this.state.display ? <CollectionForm addToCollection={this.addToCollection}/> : null}
-                                    <button className="FormBtn" onClick={() => this.handleClick}>Show Form</button>
+                                        {/* {this.state.display ? <CollectionForm addToCollection={this.addToCollection}/> : null} */}
+                                        <CollectionForm addToCollection={this.addToCollection}/>
                                     </div>
                                 </nav>
                             </div>

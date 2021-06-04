@@ -1,6 +1,6 @@
 .CardList {
     
-    flex: 0 1 auto;
+    /* flex: 0 1 auto; */
     text-align: center;
     grid-area: main;
     height: 1200px;
@@ -20,20 +20,20 @@
 
 .CollectionList {
     /* overflow-x: scroll; */
-    flex: 0 1 auto;
+    /* flex: 0 1 auto; */
     text-align: center;
     grid-area: main;
     height: 1200px;
-    left: 100px;
+    left: 500px;
     background-color: transparent;
-    width: 1000px;
+    width: 900px;
     padding: 20px;
     margin: 0px;
     font-family:monospace;
     font-size: calc(6px + 1vmin);
     background-color: #1b1d20;
-    box-shadow: 10px 10px rgb(71, 142, 155);
-    box-sizing: border-box;
+    /* box-shadow: 10px 10px rgb(71, 142, 155);
+    box-sizing: border-box; */
     position: fixed;
 }
 .collection {
@@ -42,39 +42,22 @@
     text-align: center;
     grid-area: main;
     height: 1200px;
-    left: 150px;
+    left: -10px;
     background-color: transparent;
-    width: 1500px;
+    width: 1000px;
     padding: 20px;
     margin: 0px;
     font-family:monospace;
     font-size: calc(6px + 1vmin);
-    background-color: #1b1d20;
-    box-shadow: 10px 10px rgb(71, 142, 155);
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     position: relative;
+    margin-top: 10px;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: .5rem;
 }
 
-.collection-cont {
-    /* overflow-x: scroll; */
-    flex: 0 1 auto;
-    text-align: center;
-    grid-area: main;
-    height: 1000px;
-    left: 180px;
-    background-color: transparent;
-    width: 1200px;
-    padding: 10px;
-    top : 160px;
-    margin: 0px;
-    font-family:monospace;
-    font-size: calc(6px + 1vmin);
-    background-color: #1b1d20;
-    box-shadow: 10px 10px rgb(71, 142, 155);
-    box-sizing: border-box;
-    position: fixed;
-    outline-style: groove;
-}
 
 h1 {
     color: rgb(219, 233, 241); 
@@ -87,8 +70,8 @@ h1 {
     padding: 4px 0;
     border-radius: 7px;
     background: black;
-    width: 300px;
-    height: 380px;
+    width: 350px;
+    height: 500px;
     color: rgb(0, 0, 0); 
     text-shadow: rgb(212, 234, 238) 1px 0 10px;
     font-weight: bold;
@@ -97,6 +80,7 @@ h1 {
 }
 
 .card-inner {
+    display: inline-grid;
     width: 96%;
     height: 93.5%;
     background: rgb(71, 142, 155);
@@ -138,7 +122,7 @@ h1 {
 .card-avatar {
     background: #333;
     width: 80%;
-    height: 14rem;
+    height: 10rem;
     margin: 0 auto;
     cursor: pointer;
 }
@@ -159,12 +143,14 @@ h1 {
 .card-description {
     background: #ccc;
     width: 94%;
-    height: 150px;
+    height: 20px;
     margin: 0 auto;
     font-size: .9rem;
     padding: .7rem .5rem;
     text-align: left;
     font-style: italic;
+    position: relative;
+    box-sizing: inherit;
 }
 
 .card-ability-strength {
@@ -191,9 +177,14 @@ ul {
     text-align: center;
 }
 
-button {
-    height: 0.8px;
-    bottom: 10px;
-    left: 180px;
-    position: absolute;
+button.like-btn {
+    height: 20px;
+    bottom: .5px;
+    left: 20px;
+    position: relative;
+    background-color: whitesmoke;
+    border: #52cdec solid 1px;
+    color: rgb(204, 242, 243);
+    background-color: #50555a;
+    
 }

@@ -23,15 +23,15 @@ body {
 .header-cont {
   grid-area: header;
   /* background-image: url('https://static8.depositphotos.com/1177973/814/i/600/depositphotos_8144806-stock-photo-spotlight-studio-interior-black-background.jpg'); */
-  /* background-color: black; */
-  min-height: 10vh;
+  background-color: #1b1d20;
+  min-height: 15vh;
   width: 2000px;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   font-size: calc(18px + 1vmin);
-  background-color: #1b1d20;
+
   left: 0px;
   color: rgb(158, 193, 212);
   text-shadow: rgb(71, 142, 155) 1px 0 10px;
@@ -45,21 +45,30 @@ body {
 } */
 
 .header {
+  flex: 0 1 auto;
   left: 0px;
-  width: auto;
-  
+  width: 900px;
+  background-color: #1b1d20;
+  position: fixed;
 }
-
+h1 {
+  position: fixed;
+  top: 0.5px;
+  width: 900px;
+  left: -150px;
+}
 .header img {
   height: 100px;
   width: 100px;
-  top: 10px;
-  left: 100px;
-  position: fixed;
+  top: 7px;
+  left: 200px;
+  position: relative;
+  z-index: 100;
   
 }
 a {
   text-align: center;
+  width: auto;
   left: 100px;
   color: rgb(219, 233, 241); 
     text-shadow: rgb(212, 234, 238) 1px 0 10px;
@@ -81,10 +90,11 @@ a {
   width: 180px;
   list-style-type: none;
   cursor: pointer;
-  position: fixed;
+  position: relative;
   box-shadow: 10px 10px rgb(71, 142, 155);
   box-sizing: border-box;
 }
+
 
 .About-Cont {
   grid-area: main;

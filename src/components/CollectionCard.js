@@ -1,7 +1,7 @@
 import React from 'react'
 import './CollectionCard.css';
 
-const CollectionCard = ({card, handleClick, handleDelete}) => {
+const CollectionCard = ({card, handleDelete}) => {
     return (
         <div className="card">
             <div className="card-inner">
@@ -13,7 +13,7 @@ const CollectionCard = ({card, handleClick, handleDelete}) => {
                         X
                     </button>
                 </div>
-                <div className="image" onClick={() => handleClick(card)}>
+                <div className="image">
                     <img 
                         src={card.image} 
                         alt={card.name} 
