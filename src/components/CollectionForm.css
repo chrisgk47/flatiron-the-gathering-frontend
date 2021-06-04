@@ -5,7 +5,10 @@ button {
     border-radius: 5px;
     height: 2rem;
     width: max-content;
+    background-color: whitesmoke;
+    border: #52cdec solid 1px;
     color: rgb(204, 242, 243);
+    background-color: #50555a;
     font-size: 18px;
     justify-self: center;
     cursor: pointer;

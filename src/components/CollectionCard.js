@@ -1,5 +1,5 @@
 import React from 'react'
-import './CollectionCard.css';
+import './Cards.css';
 
 const CollectionCard = ({card, handleDelete}) => {
     return (

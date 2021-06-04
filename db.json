@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Aiden ",
       "ability": "Death Touch",
-      "likes": 33,
+      "likes": 35,
       "ability_strength": 50,
       "hp": 50,
       "rarity": "common",
@@ -60,7 +60,7 @@
       "id": 5,
       "name": "Guilherme",
       "ability": "Equip",
-      "likes": 4,
+      "likes": 9,
       "ability_strength": 14,
       "hp": 50,
       "rarity": "rare",
@@ -150,8 +150,7 @@
       "rarity": "rare",
       "holographic": "epic",
       "image": "https://ca.slack-edge.com/T02MD9XTF-U01F0K10ARX-8f50f6450586-512",
-      "description": "I will have Arrakis back for myself! He who controls the Spice controls the universe and what Piter did not tell you is we have control of someone who is very close, very close, to Duke Leto! This person, this traitor, will be worth more to us than ten legions of Sardaukar!",
-      "created_at": "2021-06-03T06:51:51.166Z",
+      "description": "He who controls the Spice controls the universe.",
       "updated_at": "2021-06-03T06:51:51.166Z"
     },
     {
@@ -237,18 +236,6 @@
       "description": "I must have him dead and his line ended.",
       "created_at": "2021-06-03T06:51:51.184Z",
       "updated_at": "2021-06-03T06:51:51.184Z"
-    },
-    {
-      "name": "Sid",
-      "ability": "Good",
-      "likes": 0,
-      "ability_strength": "10",
-      "hp": 50,
-      "rarity": "legend",
-      "holographic": "rare",
-      "image": "https://img-new.cgtrader.com/items/2073599/12b690bc3b/sid-phillips-rigged-3d-model-rigged-fbx-blend.jpg",
-      "description": "",
-      "id": 18
     },
     {
       "name": "James Bond",

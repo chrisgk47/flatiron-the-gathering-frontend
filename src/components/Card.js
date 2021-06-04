@@ -22,7 +22,7 @@ const Card = ({card, addLikes, deleteCard}) => {
                 </div>
                 <div className="card-ability">
                     Ability: {card.ability} <br></br>
-                    Likes {card.likes}
+                    Likes: {card.likes}
                     <button onClick={() => addLikes(card)} className='like-btn'>{'♥️'}</button>
                     {/* <button className='likes'>♥️</button> */}
                 </div>
