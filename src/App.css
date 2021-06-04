@@ -1,5 +1,6 @@
 body {
-  background: url('https://wallpaperaccess.com/full/2288809.jpg')no-repeat center center fixed;
+  /* background: url('https://wallpaperaccess.com/full/2288809.jpg')no-repeat center center fixed; */
+  background: url('https://cdn.hipwallpaper.com/i/88/29/cmJVTb.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -24,6 +25,7 @@ body {
   grid-area: header;
   /* background-image: url('https://static8.depositphotos.com/1177973/814/i/600/depositphotos_8144806-stock-photo-spotlight-studio-interior-black-background.jpg'); */
   background-color: #1b1d20;
+  background-image: linear-gradient(#1b1d20, rgb(119, 210, 223));
   min-height: 15vh;
   width: 2000px;
   display: flex;
@@ -48,7 +50,7 @@ body {
   flex: 0 1 auto;
   left: 0px;
   width: 900px;
-  background-color: #1b1d20;
+  background-color: transparent;
   position: fixed;
 }
 h1 {
@@ -71,26 +73,27 @@ a {
   width: auto;
   left: 100px;
   color: rgb(219, 233, 241); 
-    text-shadow: rgb(212, 234, 238) 1px 0 10px;
+  text-shadow: rgb(212, 234, 238) 1px 0 10px;
 }
 
 .Sidebar {
   list-style: none;
   text-align: center;
   font-size: 20px;
-  padding: 20px;
+  padding: 10px;
   top: 160px;
   margin: 0px;
   grid-area: sidebar;
   background-color: #1b1d20;
-  color: rgb(228, 178, 178);
-  text-shadow: rgb(71, 142, 155) 1px 0 10px;
+  background-image: linear-gradient(#1b1d20, rgb(119, 210, 223));
+  color: rgb(219, 233, 241); 
+  text-shadow: rgb(58, 64, 65) 1px 0 10px;
   text-align: center;
   height: 1200px;
   width: 180px;
   list-style-type: none;
   cursor: pointer;
-  position: relative;
+  position: fixed;
   box-shadow: 10px 10px rgb(71, 142, 155);
   box-sizing: border-box;
 }

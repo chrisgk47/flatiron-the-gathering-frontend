@@ -17,27 +17,21 @@
     position: absolute;
     /* background-image: url('https://i0.wp.com/images.ctfassets.net/ryplwhabvmmk/4KBUfhwrTGsF2AzVz4TjM4/9060545e850b512c668d7f093dbb0167/worlds_showcase_event_battlefield.png?ssl=1'); */
 }
-
-.CollectionList {
-    /* overflow-x: scroll; */
-    /* flex: 0 1 auto; */
-    text-align: center;
+.Cardlist-cont {
     grid-area: main;
+    position: fixed;
     height: 1200px;
-    left: 500px;
+    left: 270px;
+    top: 100px;
     background-color: transparent;
-    width: 900px;
+    width: 1000px;
     padding: 20px;
     margin: 0px;
-    font-family:monospace;
-    font-size: calc(6px + 1vmin);
-    background-color: #1b1d20;
-    /* box-shadow: 10px 10px rgb(71, 142, 155);
-    box-sizing: border-box; */
-    position: fixed;
+    margin-top: 10px;
+    margin-left: auto;
 }
 .collection {
-    /* flex: 0 1 auto; */
+    overflow: scroll;
     text-align: center;
     grid-area: main;
     height: 1200px;
@@ -48,7 +42,6 @@
     margin: 0px;
     font-family:monospace;
     font-size: calc(6px + 1vmin);
-    /* box-sizing: border-box; */
     position: relative;
     margin-top: 10px;
     margin-left: auto;
