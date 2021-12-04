@@ -4,16 +4,9 @@ import Header from './Header'
 import CardList from './components/CardList'
 import Collection from './Collection'
 import CollectionForm from './components/CollectionForm'
+import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
 
 import './App.css';
-
-
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
 
 const cardUrl = 'http://localhost:3000/cards'
 // const collectionsUrl = 'http://localhost:3000/collections'
